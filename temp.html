@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>OK</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<style>
+.collapsible {
+  background-color: #c5e1a5;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+.content {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: #f5f5dc;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  max-width: 100%;
+  width: 800px; /*diy */
+}
+
+</style>
+</head>
+<body> <div class="container">
+
+<center>
+You can start coding by yourself!
+</center>
+
+
+<h2 class="collapsible">fuwuqi ads</h2>
+<div class="content">
+  <p><a href="https://my.hostyun.com/page.aspx?c=referral&u=36636">
+  pianyi fuwuqi ershou</a><br>
+  <a href="https://bwh81.net/aff.php?aff=50105&pid=57">
+  
+  pianyi fuwuqi yishou meiguode
+  </a> <br>
+<a href="https://s.qiniu.com/vEfmYv"> cdn  </a> <br>
+
+<a href="https://www.aliyun.com/product/ecs?source=5176.11533457&userCode=ga99g3xe">
+aliyun</a> <br>
+<a href="https://cloud.tencent.com/act/cps/redirect?redirect=2446&cps_key=6be188548c4a98dae7ae0f06d9ad121d&from=console">tencent</a> <br>
+</p>
+</div>
+
+<h2 class="collapsible">visa card ads</h2>
+<div class="content">
+  <p>
+  <a href="https://dupay.one/web-app/register-h5?invitCode=345709&lang=zh-cn">VISA MASTERCARD</a><br>
+   <a href="https://ichange.one/?rid=8565"> USDT -- USD </a><br>
+   <a href=""></a><br>
+  
+  
+  
+ </p>
+
+</div>
+
+
+
+<h2 class="collapsible">ads</h2>
+<div class="content">
+  <p><a href="https://sms-activate.org/?ref=4980766">
+SMS website</a><br>
+
+
+<a href="https://www.west.cn/?ReferenceID=814542">
+pian yi  domain</a><br>
+
+</p>
+
+</div>
+
+
+<center>
+    <p id="sTime">Time</p>  
+</center>
+
+
+
+</div>
+
+
+
+
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+}
+</script>
+
+<script>  
+        function getServerTime() {  
+            var xhr = new XMLHttpRequest();  
+            xhr.open('HEAD', window.location.href, true);  
+            xhr.onreadystatechange = function () {  
+                if (xhr.readyState === 2) {  
+                    var serverTime = new Date(xhr.getResponseHeader('Date'));  
+                    var year = serverTime.getFullYear();  
+                    var month = serverTime.getMonth() + 1;  
+                    var date = serverTime.getDate();  
+                    var hours = serverTime.getHours();  
+                    var minutes = serverTime.getMinutes();  
+                    var seconds = serverTime.getSeconds();  
+  
+                   
+                    month = month < 10 ? '0' + month : month;  
+                    date = date < 10 ? '0' + date : date;  
+                    hours = hours < 10 ? '0' + hours : hours;  
+                    minutes = minutes < 10 ? '0' + minutes : minutes;  
+                    seconds = seconds < 10 ? '0' + seconds : seconds;  
+  
+                    var formattedTime = hours + ':' + minutes + ':' + seconds + ' ' + month + '/' + date + ' ' + year;  
+                    document.getElementById('sTime').textContent = formattedTime;  
+                }  
+            };  
+            xhr.send();  
+        }  
+		window.onload=function(){
+		getServerTime();
+		}
+    </script>  
+
+</body>
+</html>
